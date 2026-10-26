@@ -1,0 +1,111 @@
+/* --- 100% Fixed Navbar Styling --- */
+nav, header, .navbar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 15px 50px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar ke andar ke saare links ke liye */
+nav a, .navbar a, .nav-links a {
+  margin: 0 15px !important;
+  text-decoration: none !important;
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  transition: color 0.2s ease;
+}
+
+nav a:hover, .navbar a:hover, .nav-links a:hover {
+  color: #0d9488 !important;
+}
+
+/* Logo styling agar ho */
+.logo, nav h1, nav h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0d9488 !important;
+  margin: 0;
+}
+/* Immersive Travel Theme & Vibrant Background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.6)), 
+              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+/* Modern Transparent Container for Travel Content */
+.explore-container, .create-trip-container, .my-trips-container, .bookings-container {
+  max-width: 1250px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Stunning Page Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.page-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #0d9488, #2563eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-subtitle {
+  color: #475569;
+  font-size: 1.1rem;
+}
+
+/* Gorgeous Destination Cards with Hover Effect */
+.dest-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dest-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Action Buttons */
+button, .btn-plan-trip {
+  background: linear-gradient(135deg, #0d9488, #0f766e);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+button:hover, .btn-plan-trip:hover {
+  opacity: 0.92;
+  transform: scale(1.02);
+}
