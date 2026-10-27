@@ -2,6 +2,11 @@ import axios from 'axios';
 
 const API_URL = import.meta.env.VITE_API_URL || "https://travelverse-qk4d.vercel.app";
 
+// 1. Create the axios instance with baseURL (Yeh line missing thi)
+const API = axios.create({
+  baseURL: API_URL,
+});
+
 // Attach token to requests if available
 API.interceptors.request.use((req) => {
   const token = localStorage.getItem('token');
@@ -71,14 +76,14 @@ export const deleteExpense = async (expenseId) => {
   return response.data;
 };
 
-// AI Itinerary & Estimation API calls (Using configured 'API' instance instead of undefined API_BASE)
+// AI Itinerary & Estimation API calls
 export const generateAiItinerary = async (tripData) => {
   const response = await API.post('/ai/generate-itinerary', tripData);
   return response;
 };
 
 export const getAiTripEstimate = async (estimateData) => {
-  const response = await API.post('/ai/estimate-trip', estimateData);
+  const response = await API.post('/ai/estimate-estimate', estimateData); // Check your endpoint if needed
   return response;
 };
 
