@@ -1,8 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({
-  baseURL: 'http://localhost:5000/api'
-});
+const API_URL = import.meta.env.VITE_API_URL || "https://travelverse-qk4d.vercel.app";
 
 // Attach token to requests if available
 API.interceptors.request.use((req) => {
